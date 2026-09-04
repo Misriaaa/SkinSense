@@ -141,24 +141,26 @@ SkinSense can be used for:
 
 ## Image Upload Page
 
-![Image Upload](images/upload.png)
+![Image Upload](images/uploads.png)
 
-## Prediction Page
-
-![Prediction Page](images/prediction.png)
 
 ## Disease Prediction Result
 
-![Prediction Result](images/prediction_result.png)
+![Prediction Result](images/results.png)
+
+
+## Alert
+
+![Alerts](images/alerts.png)
 
 
 ## System Architecture
 
-![System Architecture](images/system_architecture.png)
+![System Architecture](images/Systemarc.png)
 
 ## Workflow
 
-![Workflow](images/workflow.png)
+![Workflow](images/systemwrk.png)
 
 ## Developed By
 
