@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Result - SkinSense</title>
+  <link rel="stylesheet" href="{% static 'detector/assets/css/style.css' %}">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div style="max-width:700px;margin:40px auto;padding:20px;text-align:center;">
+    <h2>Prediction Result</h2>
+
+    {% if error %}
+      <div style="color:red;">{{ error }}</div>
+    {% else %}
+      <img src="{{ file_url }}" alt="Uploaded" style="width:300px;border-radius:8px;"><br><br>
+      <h3>Disease: <span style="color:green;">{{ disease|upper }}</span></h3>
+      <p>Confidence: {{ confidence }}%</p>
+    {% endif %}
+
+    <p><a href="{% url 'detector:upload' %}">Try another</a> | <a href="{% url 'detector:home' %}">Home</a></p>
+  </div>
+
+  {% if disease %}
+  <script>
+  Swal.fire({
+    title: '🧬 Detected Disease',
+    html: '<b>{{ disease }}</b><br>Confidence: {{ confidence }}%',
+    icon: 'success',
+    confirmButtonText: 'OK',
+    confirmButtonColor: '#4CAF50',
+    background: '#f4fff7',
+  });
+  </script>
+  {% endif %}
+</body>
+</html>
